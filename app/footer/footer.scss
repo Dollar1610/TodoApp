@@ -1,0 +1,13 @@
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-top:1px solid black;
+  height:60px;
+  padding:0 4% 0 4%;
+}
+.copyright {
+  display: flex;
+  font-size:30px;
+}

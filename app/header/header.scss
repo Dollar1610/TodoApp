@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid black;
+  height:60px;
+  padding:0 4% 0 4%;
+}
+.productName, .mail {
+  display: flex;
+  font-size:30px;
+}
