@@ -1,15 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.scss';
 
-const Header = ({ productName='Product name', mail='test@mail.ru' }) =>
+const Header = ({ productName = 'Product name', mail = 'test@mail.ru' }) =>
   (
     <header>
-      <div className="productName">{productName}</div>
+      <div className="product-name">{productName}</div>
       <div className="mail">{mail}</div>
     </header>
   );
+
+Header.propTypes = {
+  productName: PropTypes.string,
+  mail: PropTypes.string,
+};
 
 export default Header;

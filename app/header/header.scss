@@ -1,3 +1,9 @@
+$medium: 768px;
+@mixin respond-to($media) {
+  @if $media == medium-screens {
+    @media only screen and (max-width: $medium) { @content; }
+  }
+}
 header {
   display: flex;
   min-width: 100%;
@@ -7,7 +13,8 @@ header {
   height:60px;
   padding:0 4% 0 4%;
 }
-.productName, .mail {
+.product-name, .mail {
   display: flex;
   font-size:30px;
+  @include respond-to(medium-screens) { font-size: 20px; }
 }

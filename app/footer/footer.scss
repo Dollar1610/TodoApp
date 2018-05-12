@@ -1,3 +1,9 @@
+$medium: 768px;
+@mixin respond-to($media) {
+  @if $media == medium-screens {
+    @media only screen and (max-width: $medium) { @content; }
+  }
+}
 footer {
   display: flex;
   width: 100%;
@@ -10,4 +16,5 @@ footer {
 .copyright {
   display: flex;
   font-size:30px;
+  @include respond-to(medium-screens) { font-size: 20px; }
 }

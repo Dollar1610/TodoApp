@@ -1,13 +1,12 @@
 import React from 'react';
+import 'bulma/bulma.sass';
 
-import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './todo.scss';
-import 'bulma/bulma.sass';
 
 import Header from './header/header';
 import Footer from './footer/footer';
-import Body from './body/center';
+import Body from './body/body';
 
 const Todo = () => (
   <section className="section">

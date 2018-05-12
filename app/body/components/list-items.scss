@@ -1,7 +1,11 @@
-.listItems {
+.list-items {
   display: flex;
   width: 100%;
   flex-direction: column;
   margin-top:30px;
   align-items: center;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
 }
