@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.scss';
 
 const Header = ({ productName = 'Product name', mail = 'test@mail.ru' }) =>

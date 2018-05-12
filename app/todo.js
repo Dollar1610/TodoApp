@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bulma/bulma.sass';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './todo.scss';
 

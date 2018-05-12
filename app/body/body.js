@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import React, { Component } from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bulma/bulma.sass';
 import './body.scss';
 
 
