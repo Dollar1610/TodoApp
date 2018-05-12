@@ -14,18 +14,16 @@ import ListItems from './components/list-items';
 class Body extends Component {
   constructor() {
     super();
-    (localStorage.getItem('items') === '') ? this.state = {
-      items: [],
-      inputClass: 'application_input input',
-      error: false,
-    } : this.state = {
-      items: localStorage.getItem('items').split(','),
+    this.state = {
+      items: localStorage.getItem('items') ? localStorage.getItem('items').split(',') : [],
       inputClass: 'application_input input',
       error: false,
     };
     this.inputRef = (element) => { this.textInput = element; };
+    this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
-  addItem = () => {
+  addItem() {
     const value = this.textInput.value ? this.textInput.value : '';
     console.log(this.textInput.value);
     if (value === '') {
@@ -37,13 +35,13 @@ class Body extends Component {
     this.textInput.value = '';
     this.setState({ items, inputClass: 'application_input input', error: false });
     return null;
-  };
-  deleteItem = () => {
+  }
+  deleteItem() {
     const { items } = this.state;
     items.splice(items.length - 1, 1);
     localStorage.setItem('items', items);
     this.setState({ items, inputClass: 'application_input input', error: false });
-  };
+  }
   render() {
     const {
       addItem,
