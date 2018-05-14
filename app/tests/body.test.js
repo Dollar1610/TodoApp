@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Body from './../body/body';
 
 describe('<Body />', () => {
@@ -7,13 +7,16 @@ describe('<Body />', () => {
     const snapshotBody = shallow(<Body />);
     expect(snapshotBody).toMatchSnapshot();
   });
-  it('test methods Body', () => {
-    const wrapper = mount(<Body />, { attachTo: document.body.firstChild });
-    const addItem = jest.spyOn(wrapper.instance(), 'addItem');
-    console.log(wrapper.instance().addItem);
-    wrapper.find('button').first().simulate('click');
-    expect(addItem).toHaveBeenCalled();
-    wrapper.instance().addItem.handleClick();
+  it('expandable High-Order Component', () => {
+    let props;
+    let wrapper;
+    let ComposedComponent;
+    let MockButton = ({ collapsed, expandCollapse }) => (
+      <button onClick={expandCollapse}>
+        {(collapsed) ? 'collapsed' : 'expanded' }
+      </button>
+    )
+
   });
 });
 
