@@ -185,7 +185,9 @@
     ]
   },
   "jest": {
-    "setupFiles": ["./app/browserMocks.js"],
+    "setupFiles": [
+      "./app/browserMocks.js"
+    ],
     "collectCoverageFrom": [
       "app/**/*.{js,jsx}",
       "!app/**/*.test.{js,jsx}",
